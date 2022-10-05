@@ -1,3 +1,7 @@
+package Entity;
+
+import java.util.Objects;
+
 public class Produto {
     private String nome;
     private String fabricante;
@@ -31,5 +35,10 @@ public class Produto {
 
     public void setPreco(double preco) {
         this.preco = preco;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nome, fabricante, preco);
     }
 }
